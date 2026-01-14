@@ -10,7 +10,6 @@
       rel="stylesheet"
     />
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="caesarCypher.js"></script>
     <style>
         *,
         *::before,
@@ -26,12 +25,18 @@
           background-color: #232323;
           color: #e8e8e8;
         }
-        button {
-          cursor: pointer;
-        }
-        button:hover {
-          opacity: 0.9;
-        }
+        input,
+      textarea {
+        background-color: #2c2c2c;
+        color: #e8e8e8;
+        border: 1px solid #555;
+      }
+      button {
+        cursor: pointer;
+      }
+      button:hover {
+        opacity: 0.9;
+      }
       </style>
     </style>
   </head>
@@ -39,7 +44,7 @@
     class="min-h-screen bg-gray-100 dark:bg-gray-900 flex items-center justify-center"
   >
     <div
-      class="w-full max-w-md bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 space-y-4"
+      class="w-full max-w-md bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 space-y-4 ring-2 ring-purple-500 ring-opacity-50"
     >
       <h1
         class="text-xl font-semibold text-center text-gray-800 dark:text-gray-100"
@@ -70,7 +75,7 @@
 
         <button
           onclick="decrypt()"
-          class="flex-1 bg-green-600 hover:bg-purple-700 text-white py-2 rounded-md"
+          class="flex-1 bg-green-600 hover:bg-green-700 text-white py-2 rounded-md"
         >
           Decrypt
         </button>
@@ -80,7 +85,7 @@
         id="output"
         placeholder="Result..."
         readonly
-        class="w-full h-24 p-3 rounded-md bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-gray-100"
+        class="w-full h-24 p-3 rounded-md bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500 mb-4"
       ></textarea>
       <div><a href="./index2.html">Link to Vinegere</a></div>
     </div>
